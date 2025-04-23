@@ -15,7 +15,7 @@ class PageController extends AbstractController {
 	// Ajout d'une fonction nommée Home (méthode) qui exécute un var_dump
 	// Définition d'une route, soit le chemin d'accès (url) à "/"
 	// Quand un utilisateur demande l'url "/", la fonction est appelée
-	#[Route('/', name:"home")]
+	#[Route('home', name:"home")]
 	public function home() {
 		// j'utilise la classe Response de Symfony
 		// pour renvoyer une réponse HTTP, incluant HTML et un status HTTP 200

@@ -28,13 +28,19 @@
 
    header{
        display: flex;
-       justify-content: center;
+       justify-content: flex-start;
+       gap: 4rem;
+       margin-left: 5% auto;
        align-items: center;
        background: linear-gradient(to bottom, rgba(99, 208, 6, .6), transparent);
        width: 100%;
        height: 10vh;
    }
-   
+
+   header img {
+    width: 5%;
+    height: auto;
+   }   
    
    footer{
        display: flex;

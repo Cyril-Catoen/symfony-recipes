@@ -6,17 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <!-- Import du fichier style.css -->
-        <link rel="stylesheet" href="../public/css/style.css?v=<?= time(); ?>" />
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ app.request.server.get('REQUEST_TIME') }}" />
 
         <!-- Nomme l'onglet du navigateur -->
         <title>Home</title>
 </head>
 <body>
     <header>
+    <img src="{{ asset('images/LogoPathWhite.png') }}" alt="logo recettes" />
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="list-recipes">List-recipes</a></li>
+                    <li><a href="{{ path('home') }}">Home</a></li>
+                    <li><a href="{{ path('list-recipes') }}">List-recipes</a></li>
                 </ul>
             </nav>
     </header>
