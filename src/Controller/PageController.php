@@ -157,7 +157,12 @@ class PageController extends AbstractController {
             ]
         ];        
 
-		return $this->render('home.html.twig', ['recipes' => $recipes]);
+        $lastRecipes = array_slice($recipes, -3, 3, true);
+
+
+		return $this->render('home.html.twig', [
+			'recipes' => $lastRecipes
+		]);
 	}
 
 }
