@@ -1,26 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Permet de configurer le site en responsive -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Import du fichier style.css -->
+        <link rel="stylesheet" href="../public/css/style.css?v=<?= time(); ?>" />
+
+        <!-- Nomme l'onglet du navigateur -->
+        <title>Home</title>
+</head>
+    
 
 	<body>
 
 		<main>
 
 			<h1>Liste des recettes</h1>
-
+            <div id="article-order">
 			{% for recipe in recipes %}
-
-					<article>
+    
+                    <article class="list-articles article">
 
 						<h2>{{ recipe.title }}</h2>
                         <img src="{{ recipe.image }}" />
-                        <ul>{% for ingredient in recipe.ingredients %} <li>{{ ingredient }}</li>{% endfor %}</ul>
-						<p>{{ recipe.description }}</p>
+                        <p>Ingrédients :<ul>{% for ingredient in recipe.ingredients %} <li>{{ ingredient }}</li>{% endfor %}</ul>
+						</p>
+                        <p>{{ recipe.description }}</p>
 						<p>{{ recipe.createdAt | date('d-m-Y')}}
                         <p>{{ recipe.category }}</p>		
 
 					</article>
 				
 			{% endfor %}
-
+            </div>
 		</main>
 
 	</body>

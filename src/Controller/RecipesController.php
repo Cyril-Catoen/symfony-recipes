@@ -24,7 +24,7 @@ class RecipesController extends AbstractController {
             1 => [
                 'id'          => 1,
                 'title'       => 'Quiche Lorraine',
-                'image'       => 'images/quiche-lorraine.jpg',
+                'image'       => 'images/quiche_lorraine.jpg',
                 'ingredients' => [
                     '200 g de lardons',
                     '3 œufs',
@@ -59,7 +59,7 @@ class RecipesController extends AbstractController {
             3 => [
                 'id'          => 3,
                 'title'       => 'Soupe à l’oignon gratinée',
-                'image'       => 'images/soupe-oignon.jpg',
+                'image'       => 'images/soupe_oignon.webp',
                 'ingredients' => [
                     '800 g d’oignons',
                     '1 L de bouillon de bœuf',
@@ -77,7 +77,7 @@ class RecipesController extends AbstractController {
             4 => [
                 'id'          => 4,
                 'title'       => 'Tarte Tatin',
-                'image'       => 'images/tarte-tatin.jpg',
+                'image'       => 'images/tatin.webp',
                 'ingredients' => [
                     '6 pommes Golden',
                     '120 g de beurre',
@@ -92,7 +92,7 @@ class RecipesController extends AbstractController {
             5 => [
                 'id'          => 5,
                 'title'       => 'Crêpes Suzette',
-                'image'       => 'images/crepes-suzette.jpg',
+                'image'       => 'images/suzettes.jpg',
                 'ingredients' => [
                     '250 g de farine',
                     '3 œufs',
@@ -110,7 +110,7 @@ class RecipesController extends AbstractController {
             6 => [
                 'id'          => 6,
                 'title'       => 'Salade Niçoise',
-                'image'       => 'images/salade-nicoise.jpg',
+                'image'       => 'images/salade_nicoise.webp',
                 'ingredients' => [
                     '200 g de tomates cerises',
                     '1 concombre',
@@ -128,7 +128,7 @@ class RecipesController extends AbstractController {
             7 => [
                 'id'          => 7,
                 'title'       => 'Poulet Basquaise',
-                'image'       => 'images/poulet-basquaise.jpg',
+                'image'       => 'images/poulet_basquaise.webp',
                 'ingredients' => [
                     '4 cuisses de poulet',
                     '2 poivrons rouges',
@@ -145,7 +145,7 @@ class RecipesController extends AbstractController {
             8 => [
                 'id'          => 8,
                 'title'       => 'Mousse au Chocolat',
-                'image'       => 'images/mousse-chocolat.jpg',
+                'image'       => 'images/mousse_chocolat.webp',
                 'ingredients' => [
                     '200 g de chocolat noir',
                     '6 œufs',
@@ -155,8 +155,8 @@ class RecipesController extends AbstractController {
                 'createdAt'   => '2025-04-05 17:05:00',
                 'category'    => 'Dessert'
             ]
-        ];        
-
+        ];  
+        
 		return $this->render('listRecipes.html.twig', ['recipes' => $recipes]);
 	}
 
