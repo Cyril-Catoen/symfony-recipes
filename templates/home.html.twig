@@ -1,0 +1,32 @@
+<html>
+
+	<body>
+
+		<main>
+
+			<h1>Liste des recipes</h1>
+
+            {% set total = recipes|length %}
+            {% set start = total > 2 ? total - 2 : 0 %}
+            
+            {% for i in range(start, total) %}
+                {% set recipe = recipes[i] %}
+
+					<article>
+
+						<h2>{{ recipe.title }}</h2>
+                        <img src="{{ recipe.image }}" />
+                        <ul>{% for ingredient in recipe.ingredients %} <li>{{ ingredient }}</li>{% endfor %}</ul>
+						<p>{{ recipe.description }}</p>
+						<p>{{ recipe.createdAt | date('d-m-Y')}}
+                        <p>{{ recipe.category }}</p>		
+
+					</article>
+				
+			{% endfor %}
+
+		</main>
+
+	</body>
+
+</html>
